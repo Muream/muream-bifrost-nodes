@@ -97,8 +97,8 @@
     "types": [],
     "compounds": [
         {
-            "name": "Geometry::Primitive::mesh_cone",
-            "uriImported": "file:///plane.json",
+            "name": "Muream::Primitive::primitive_cone",
+            "uriImported": "file:///mesh_cone.json",
             "metadata": [
                 {
                     "metaName": "io_nodes",
@@ -283,7 +283,7 @@
             "compounds": [
                 {
                     "name": "base_circle_points",
-                    "uriImported": "file:///plane.json",
+                    "uriImported": "file:///mesh_cone.json",
                     "metadata": [
                         {
                             "metaName": "io_nodes",
@@ -467,7 +467,7 @@
                     "compounds": [
                         {
                             "name": "angle",
-                            "uriImported": "file:///plane.json",
+                            "uriImported": "file:///mesh_cone.json",
                             "metadata": [
                                 {
                                     "metaName": "io_nodes",
@@ -588,7 +588,7 @@
                             "compounds": [
                                 {
                                     "name": "theta",
-                                    "uriImported": "file:///plane.json",
+                                    "uriImported": "file:///mesh_cone.json",
                                     "metadata": [
                                         {
                                             "metaName": "io_nodes",
@@ -1067,7 +1067,7 @@
                 },
                 {
                     "name": "base_radius",
-                    "uriImported": "file:///plane.json",
+                    "uriImported": "file:///mesh_cone.json",
                     "metadata": [
                         {
                             "metaName": "io_nodes",
@@ -1365,7 +1365,7 @@
                 },
                 {
                     "name": "face_vertex",
-                    "uriImported": "file:///plane.json",
+                    "uriImported": "file:///mesh_cone.json",
                     "metadata": [
                         {
                             "metaName": "io_nodes",
@@ -1457,7 +1457,7 @@
                     "compounds": [
                         {
                             "name": "base_face",
-                            "uriImported": "file:///plane.json",
+                            "uriImported": "file:///mesh_cone.json",
                             "metadata": [
                                 {
                                     "metaName": "_recentNode_",
@@ -1628,7 +1628,7 @@
                         },
                         {
                             "name": "face_vertex_cone",
-                            "uriImported": "file:///plane.json",
+                            "uriImported": "file:///mesh_cone.json",
                             "metadata": [
                                 {
                                     "metaName": "_recentNode_",
@@ -2099,7 +2099,7 @@
                         },
                         {
                             "name": "flatten_array",
-                            "uriImported": "file:///plane.json",
+                            "uriImported": "file:///mesh_cone.json",
                             "metadata": [
                                 {
                                     "metaName": "_recentNode_",
@@ -2420,7 +2420,7 @@
                 },
                 {
                     "name": "face_offset",
-                    "uriImported": "file:///plane.json",
+                    "uriImported": "file:///mesh_cone.json",
                     "metadata": [
                         {
                             "metaName": "io_nodes",
@@ -2484,7 +2484,7 @@
                     "compounds": [
                         {
                             "name": "iterate",
-                            "uriImported": "file:///plane.json",
+                            "uriImported": "file:///mesh_cone.json",
                             "metadata": [
                                 {
                                     "metaName": "_recentNode_",
@@ -2800,7 +2800,7 @@
                 },
                 {
                     "name": "ensure_minimum_subdivisions",
-                    "uriImported": "file:///plane.json",
+                    "uriImported": "file:///mesh_cone.json",
                     "metadata": [
                         {
                             "metaName": "io_nodes",
@@ -2947,7 +2947,7 @@
                 },
                 {
                     "name": "points_height",
-                    "uriImported": "file:///plane.json",
+                    "uriImported": "file:///mesh_cone.json",
                     "metadata": [
                         {
                             "metaName": "io_nodes",
@@ -3116,7 +3116,7 @@
                 },
                 {
                     "name": "ensure_positive_height",
-                    "uriImported": "file:///plane.json",
+                    "uriImported": "file:///mesh_cone.json",
                     "metadata": [
                         {
                             "metaName": "io_nodes",
