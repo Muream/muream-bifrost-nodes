@@ -1,0 +1,575 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///merge_meshes.json"
+        },
+        {
+            "uri": "file:///merge_points.json"
+        },
+        {
+            "uri": "file:///is_a.json"
+        },
+        {
+            "uri": "file:///get_geo_schema_type.json"
+        },
+        {
+            "uri": "file:///switch_is_a.json"
+        },
+        {
+            "uri": "file:///merge_strands.json"
+        },
+        {
+            "uri": "file:///merge_geometry.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///Math_constants.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///Math_degrees_to_radians.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///get_property_any.json"
+        },
+        {
+            "uri": "file:///get_property.json"
+        },
+        {
+            "uri": "file:///set_sub_object_property.json"
+        },
+        {
+            "uri": "file:///CoreArrayOps.json"
+        },
+        {
+            "uri": "file:///create_object_from_schema.json"
+        },
+        {
+            "uri": "file:///construct_mesh.json"
+        },
+        {
+            "uri": "file:///fluids_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///fluids_nodedefs.json"
+        },
+        {
+            "uri": "file:///primitive_cone.json"
+        },
+        {
+            "uri": "file:///Math_multiply_quaternions.json"
+        },
+        {
+            "uri": "file:///Math_euler_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_rotate_by_quaternion.json"
+        },
+        {
+            "uri": "file:///get_geo_property.json"
+        },
+        {
+            "uri": "file:///get_point_position.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///create_volume_geo_prop.json"
+        },
+        {
+            "uri": "file:///is_a_mesh.json"
+        },
+        {
+            "uri": "file:///is_a_strands.json"
+        },
+        {
+            "uri": "file:///is_a_points.json"
+        },
+        {
+            "uri": "file:///is_a_volume.json"
+        },
+        {
+            "uri": "file:///get_target_component.json"
+        },
+        {
+            "uri": "file:///create_data_geo_prop.json"
+        },
+        {
+            "uri": "file:///get_geo_component_count.json"
+        },
+        {
+            "uri": "file:///set_geo_property.array.json"
+        },
+        {
+            "uri": "file:///set_geo_property.scalar.json"
+        },
+        {
+            "uri": "file:///set_point_position.json"
+        },
+        {
+            "uri": "file:///transform_mesh.json"
+        },
+        {
+            "uri": "file:///half_of.json"
+        },
+        {
+            "uri": "file:///primitive_cylinder.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "LP::Mesh::Primitives::primitive_arrow",
+            "uriImported": "file:///bifrostGraph1",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "height"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-1754 -288"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "mesh"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "577 -444"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,LP::Mesh::Primitives,primitive_cylinder"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,LP::Transform,transform_mesh"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,subtract"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,min"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Constants,float"
+                },
+                {
+                    "metaName": "backdrop",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Substract the height of the cone to the height of the cylinder\n"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-1306.06 -308.082 345.233 259.585"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop1",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Merge the cone and cylinder into a single geometry object\nFor easier transformation later on\n"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-221 -445.98 625.743 336.626"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop2",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Move the cone at the tip of the cylinder\n"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-746.488 -112.526 242.271 352.852"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-1772.11 -646.997 1700.17 1103.88"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "height",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "1f"
+                },
+                {
+                    "portName": "mesh",
+                    "portDirection": "output",
+                    "portType": "Amino::Object"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "build_array",
+                    "nodeType": "Core::Array::build_array",
+                    "multiInPortNames": [
+                        "out_mesh",
+                        "out_mesh1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-159.842 -349.335"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "merge_geometry",
+                    "nodeType": "Modeling::Common::merge_geometry",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "145.158 -426.335"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "primitive_cone",
+                    "nodeType": "LP::Mesh::Primitives::primitive_cone",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1175 74"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "cone_height",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1560 83"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "subtract",
+                    "nodeType": "Core::Math::subtract",
+                    "multiInPortNames": [
+                        "height",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1240 -279"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "transform_mesh",
+                    "nodeType": "LP::Transform::transform_mesh",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-737.398 -52.499"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "primitive_cylinder1",
+                    "nodeType": "LP::Mesh::Primitives::primitive_cylinder",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-781.656 -484.328"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "build_array.array",
+                    "target": "merge_geometry.geometry"
+                },
+                {
+                    "source": "merge_geometry.merged",
+                    "target": ".mesh"
+                },
+                {
+                    "source": "cone_height.output",
+                    "target": "primitive_cone.height"
+                },
+                {
+                    "source": "cone_height.output",
+                    "target": "subtract.first.output1"
+                },
+                {
+                    "source": ".height",
+                    "target": "subtract.first.height"
+                },
+                {
+                    "source": "subtract.output",
+                    "target": "transform_mesh.translateY"
+                },
+                {
+                    "source": "primitive_cone.mesh",
+                    "target": "transform_mesh.in_mesh"
+                },
+                {
+                    "source": "transform_mesh.out_mesh",
+                    "target": "build_array.first.out_mesh1"
+                },
+                {
+                    "source": "subtract.output",
+                    "target": "primitive_cylinder1.height"
+                },
+                {
+                    "source": "primitive_cylinder1.mesh",
+                    "target": "build_array.first.out_mesh"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "primitive_cone.subdivisions",
+                    "valueType": "long",
+                    "value": "32"
+                },
+                {
+                    "valueName": "primitive_cone.height",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "primitive_cone.angle",
+                    "valueType": "float",
+                    "value": "45f"
+                },
+                {
+                    "valueName": "cone_height.value",
+                    "valueType": "float",
+                    "value": "1f"
+                },
+                {
+                    "valueName": "transform_mesh.quaternion",
+                    "valueType": "Math::float4",
+                    "value": {
+                        "x": "0f",
+                        "y": "0f",
+                        "z": "0f",
+                        "w": "1f"
+                    }
+                },
+                {
+                    "valueName": "primitive_cylinder1.radius",
+                    "valueType": "float",
+                    "value": "0.100000001f"
+                },
+                {
+                    "valueName": "primitive_cylinder1.center_pivot",
+                    "valueType": "bool",
+                    "value": "false"
+                }
+            ]
+        }
+    ]
+}
