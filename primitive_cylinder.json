@@ -101,83 +101,6 @@
             "uriImported": "file:///bifrostGraph1",
             "metadata": [
                 {
-                    "metaName": "io_nodes",
-                    "metadata": [
-                        {
-                            "metaName": "io_inodes",
-                            "metadata": [
-                                {
-                                    "metaName": "input",
-                                    "metadata": [
-                                        {
-                                            "metaName": "io_ports",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "subdivisions"
-                                                },
-                                                {
-                                                    "metaName": "height"
-                                                },
-                                                {
-                                                    "metaName": "radius"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "metaName": "io_metadata",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "DisplayMode",
-                                                    "metaType": "string",
-                                                    "metaValue": "2"
-                                                },
-                                                {
-                                                    "metaName": "LayoutPos",
-                                                    "metaType": "string",
-                                                    "metaValue": "10 316"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "metaName": "io_onodes",
-                            "metadata": [
-                                {
-                                    "metaName": "output",
-                                    "metadata": [
-                                        {
-                                            "metaName": "io_ports",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "mesh"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "metaName": "io_metadata",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "DisplayMode",
-                                                    "metaType": "string",
-                                                    "metaValue": "2"
-                                                },
-                                                {
-                                                    "metaName": "LayoutPos",
-                                                    "metaType": "string",
-                                                    "metaValue": "1230 75"
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
                     "metaName": "_recentNode_",
                     "metaType": "string",
                     "metaValue": "BifrostGraph,Core::Array,build_array"
@@ -205,7 +128,57 @@
                 {
                     "metaName": "ViewportRect",
                     "metaType": "string",
-                    "metaValue": "-26.4197 -161.211 1605.99 1042.74"
+                    "metaValue": "-353.313 -76 1735.36 1126.73"
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "subdivisions"
+                                                },
+                                                {
+                                                    "metaName": "height"
+                                                },
+                                                {
+                                                    "metaName": "radius"
+                                                },
+                                                {
+                                                    "metaName": "center_pivot"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "mesh"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
                 }
             ],
             "ports": [
@@ -229,7 +202,13 @@
                     "portName": "radius",
                     "portDirection": "input",
                     "portType": "float",
-                    "portDefault": "10f"
+                    "portDefault": "0.100000001f"
+                },
+                {
+                    "portName": "center_pivot",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "false"
                 }
             ],
             "compounds": [
@@ -332,6 +311,26 @@
                             "valueType": "double",
                             "metadata": [
                                 {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "3"
+                                },
+                                {
                                     "metaName": "DisplayMode",
                                     "metaType": "string",
                                     "metaValue": "2"
@@ -340,24 +339,11 @@
                                     "metaName": "LayoutPos",
                                     "metaType": "string",
                                     "metaValue": "-440.317 187.274"
-                                },
-                                {
-                                    "metaName": "valuenode_defaultvalue",
-                                    "metaType": "string",
-                                    "metaValue": "3"
                                 }
                             ]
                         }
                     ],
                     "connections": [
-                        {
-                            "source": ".input",
-                            "target": "max.first.base_subdivisions"
-                        },
-                        {
-                            "source": "value.output",
-                            "target": "max.first.output"
-                        },
                         {
                             "source": "max.maximum",
                             "target": "to_int.from"
@@ -365,6 +351,14 @@
                         {
                             "source": "to_int.int",
                             "target": ".output"
+                        },
+                        {
+                            "source": "value.output",
+                            "target": "max.first.output"
+                        },
+                        {
+                            "source": ".input",
+                            "target": "max.first.base_subdivisions"
                         }
                     ],
                     "values": [
@@ -380,6 +374,11 @@
                     "uriImported": "file:///bifrostGraph1",
                     "metadata": [
                         {
+                            "metaName": "ViewportRect",
+                            "metaType": "string",
+                            "metaValue": "-77.2461 -128 1036.42 672.923"
+                        },
+                        {
                             "metaName": "io_nodes",
                             "metadata": [
                                 {
@@ -388,21 +387,6 @@
                                         {
                                             "metaName": "input",
                                             "metadata": [
-                                                {
-                                                    "metaName": "io_metadata",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "DisplayMode",
-                                                            "metaType": "string",
-                                                            "metaValue": "2"
-                                                        },
-                                                        {
-                                                            "metaName": "LayoutPos",
-                                                            "metaType": "string",
-                                                            "metaValue": "6.44332 0.752643"
-                                                        }
-                                                    ]
-                                                },
                                                 {
                                                     "metaName": "io_ports",
                                                     "metadata": [
@@ -422,21 +406,6 @@
                                             "metaName": "output",
                                             "metadata": [
                                                 {
-                                                    "metaName": "io_metadata",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "DisplayMode",
-                                                            "metaType": "string",
-                                                            "metaValue": "2"
-                                                        },
-                                                        {
-                                                            "metaName": "LayoutPos",
-                                                            "metaType": "string",
-                                                            "metaValue": "731.964 46.9481"
-                                                        }
-                                                    ]
-                                                },
-                                                {
                                                     "metaName": "io_ports",
                                                     "metadata": [
                                                         {
@@ -449,11 +418,6 @@
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "metaName": "ViewportRect",
-                            "metaType": "string",
-                            "metaValue": "-77.2461 -128 1036.42 672.923"
                         }
                     ],
                     "ports": [
@@ -493,6 +457,26 @@
                             "valueType": "float",
                             "metadata": [
                                 {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
+                                    "metaName": "valuenode_defaultvalue",
+                                    "metaType": "string",
+                                    "metaValue": "0"
+                                },
+                                {
                                     "metaName": "DisplayMode",
                                     "metaType": "string",
                                     "metaValue": "2"
@@ -501,11 +485,6 @@
                                     "metaName": "LayoutPos",
                                     "metaType": "string",
                                     "metaValue": "10 205"
-                                },
-                                {
-                                    "metaName": "valuenode_defaultvalue",
-                                    "metaType": "string",
-                                    "metaValue": "0"
                                 }
                             ]
                         }
@@ -537,78 +516,9 @@
                     "uriImported": "file:///bifrostGraph1",
                     "metadata": [
                         {
-                            "metaName": "io_nodes",
-                            "metadata": [
-                                {
-                                    "metaName": "io_inodes",
-                                    "metadata": [
-                                        {
-                                            "metaName": "input",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "io_metadata",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "DisplayMode",
-                                                            "metaType": "string",
-                                                            "metaValue": "2"
-                                                        },
-                                                        {
-                                                            "metaName": "LayoutPos",
-                                                            "metaType": "string",
-                                                            "metaValue": "-806 453"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "metaName": "io_ports",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "height"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "metaName": "io_onodes",
-                                    "metadata": [
-                                        {
-                                            "metaName": "output",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "io_metadata",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "DisplayMode",
-                                                            "metaType": "string",
-                                                            "metaValue": "2"
-                                                        },
-                                                        {
-                                                            "metaName": "LayoutPos",
-                                                            "metaType": "string",
-                                                            "metaValue": "266 291"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "metaName": "io_ports",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "positive"
-                                                        },
-                                                        {
-                                                            "metaName": "negative"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
+                            "metaName": "_recentNode_",
+                            "metaType": "string",
+                            "metaValue": "BifrostGraph,Core::Logic,if"
                         },
                         {
                             "metaName": "_recentNode_",
@@ -631,14 +541,56 @@
                             "metaValue": "BifrostGraph,Core::Math,clamp"
                         },
                         {
-                            "metaName": "_recentNode_",
-                            "metaType": "string",
-                            "metaValue": "BifrostGraph,Modeling::Strands,create_strands_along_normals"
-                        },
-                        {
                             "metaName": "ViewportRect",
                             "metaType": "string",
-                            "metaValue": "-681 -126 1457 946"
+                            "metaValue": "-969.709 -50.1122 1514.64 983.423"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "height"
+                                                        },
+                                                        {
+                                                            "metaName": "center_pivot"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "top_height"
+                                                        },
+                                                        {
+                                                            "metaName": "bottom_height"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "ports": [
@@ -648,11 +600,15 @@
                             "portType": "float"
                         },
                         {
-                            "portName": "positive",
+                            "portName": "center_pivot",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "top_height",
                             "portDirection": "output"
                         },
                         {
-                            "portName": "negative",
+                            "portName": "bottom_height",
                             "portDirection": "output"
                         }
                     ],
@@ -750,14 +706,24 @@
                                             "metaValue": "0"
                                         },
                                         {
-                                            "metaName": "DisplayMode",
+                                            "metaName": "valuenode_defaultvalue",
                                             "metaType": "string",
-                                            "metaValue": "2"
+                                            "metaValue": "0"
                                         },
                                         {
                                             "metaName": "valuenode_defaultvalue",
                                             "metaType": "string",
                                             "metaValue": "0"
+                                        },
+                                        {
+                                            "metaName": "valuenode_defaultvalue",
+                                            "metaType": "string",
+                                            "metaValue": "0"
+                                        },
+                                        {
+                                            "metaName": "DisplayMode",
+                                            "metaType": "string",
+                                            "metaValue": "2"
                                         },
                                         {
                                             "metaName": "LayoutPos",
@@ -803,7 +769,7 @@
                                 {
                                     "metaName": "LayoutPos",
                                     "metaType": "string",
-                                    "metaValue": "-501 406"
+                                    "metaValue": "-795.195 255.264"
                                 }
                             ]
                         },
@@ -819,7 +785,7 @@
                                 {
                                     "metaName": "LayoutPos",
                                     "metaType": "string",
-                                    "metaValue": "-234.5 361"
+                                    "metaValue": "-417.462 388.028"
                                 }
                             ]
                         },
@@ -835,16 +801,44 @@
                                 {
                                     "metaName": "LayoutPos",
                                     "metaType": "string",
-                                    "metaValue": "26.5 517"
+                                    "metaValue": "-201.163 617.837"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "if",
+                            "nodeType": "Core::Logic::if",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-87.3106 76.2685"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "if1",
+                            "nodeType": "Core::Logic::if",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "77.9784 380.859"
                                 }
                             ]
                         }
                     ],
                     "connections": [
-                        {
-                            "source": ".height",
-                            "target": "ensure_positive_height.input"
-                        },
                         {
                             "source": "ensure_positive_height.output",
                             "target": "half_of.value"
@@ -855,11 +849,35 @@
                         },
                         {
                             "source": "half_of.half_value",
-                            "target": ".positive"
+                            "target": "if.true_case"
                         },
                         {
                             "source": "negate.negated",
-                            "target": ".negative"
+                            "target": "if1.true_case"
+                        },
+                        {
+                            "source": "if.output",
+                            "target": ".top_height"
+                        },
+                        {
+                            "source": "if1.output",
+                            "target": ".bottom_height"
+                        },
+                        {
+                            "source": ".height",
+                            "target": "ensure_positive_height.input"
+                        },
+                        {
+                            "source": ".height",
+                            "target": "if.false_case"
+                        },
+                        {
+                            "source": ".center_pivot",
+                            "target": "if.condition"
+                        },
+                        {
+                            "source": ".center_pivot",
+                            "target": "if1.condition"
                         }
                     ],
                     "values": [
@@ -874,77 +892,6 @@
                     "name": "compute_faces",
                     "uriImported": "file:///bifrostGraph1",
                     "metadata": [
-                        {
-                            "metaName": "io_nodes",
-                            "metadata": [
-                                {
-                                    "metaName": "io_inodes",
-                                    "metadata": [
-                                        {
-                                            "metaName": "input",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "io_metadata",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "DisplayMode",
-                                                            "metaType": "string",
-                                                            "metaValue": "2"
-                                                        },
-                                                        {
-                                                            "metaName": "LayoutPos",
-                                                            "metaType": "string",
-                                                            "metaValue": "96.3061 -230.149"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "metaName": "io_ports",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "subdivisions"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
-                                    "metaName": "io_onodes",
-                                    "metadata": [
-                                        {
-                                            "metaName": "output",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "io_metadata",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "DisplayMode",
-                                                            "metaType": "string",
-                                                            "metaValue": "2"
-                                                        },
-                                                        {
-                                                            "metaName": "LayoutPos",
-                                                            "metaType": "string",
-                                                            "metaValue": "1410.23 -385.736"
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "metaName": "io_ports",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "all_faces"
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
                         {
                             "metaName": "_recentNode_",
                             "metaType": "string",
@@ -974,6 +921,47 @@
                             "metaName": "ViewportRect",
                             "metaType": "string",
                             "metaValue": "4.73465 -806.094 1831.32 1189.04"
+                        },
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "subdivisions"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "all_faces"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ],
                     "ports": [
@@ -992,80 +980,6 @@
                             "name": "compute_border_faces",
                             "uriImported": "file:///bifrostGraph1",
                             "metadata": [
-                                {
-                                    "metaName": "io_nodes",
-                                    "metadata": [
-                                        {
-                                            "metaName": "io_inodes",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "input",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "io_metadata",
-                                                            "metadata": [
-                                                                {
-                                                                    "metaName": "DisplayMode",
-                                                                    "metaType": "string",
-                                                                    "metaValue": "2"
-                                                                },
-                                                                {
-                                                                    "metaName": "LayoutPos",
-                                                                    "metaType": "string",
-                                                                    "metaValue": "10 155"
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "metaName": "io_ports",
-                                                            "metadata": [
-                                                                {
-                                                                    "metaName": "subdivisions"
-                                                                },
-                                                                {
-                                                                    "metaName": "current_index"
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "metaName": "io_onodes",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "output",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "io_ports",
-                                                            "metadata": [
-                                                                {
-                                                                    "metaName": "face"
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "metaName": "io_metadata",
-                                                            "metadata": [
-                                                                {
-                                                                    "metaName": "DisplayMode",
-                                                                    "metaType": "string",
-                                                                    "metaValue": "2"
-                                                                },
-                                                                {
-                                                                    "metaName": "LayoutPos",
-                                                                    "metaType": "string",
-                                                                    "metaValue": "2069 -246"
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
                                 {
                                     "metaName": "_recentNode_",
                                     "metaType": "string",
@@ -1095,6 +1009,50 @@
                                     "metaName": "ViewportRect",
                                     "metaType": "string",
                                     "metaValue": "118.379 -268.814 1572.22 1020.81"
+                                },
+                                {
+                                    "metaName": "io_nodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_inodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "input",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "subdivisions"
+                                                                },
+                                                                {
+                                                                    "metaName": "current_index"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_onodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "face"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ],
                             "ports": [
@@ -1122,6 +1080,11 @@
                                     "uriImported": "file:///bifrostGraph1",
                                     "metadata": [
                                         {
+                                            "metaName": "ViewportRect",
+                                            "metaType": "string",
+                                            "metaValue": "-1196.83 -316.508 1636.19 1062.35"
+                                        },
+                                        {
                                             "metaName": "io_nodes",
                                             "metadata": [
                                                 {
@@ -1138,21 +1101,6 @@
                                                                         },
                                                                         {
                                                                             "metaName": "current_index"
-                                                                        }
-                                                                    ]
-                                                                },
-                                                                {
-                                                                    "metaName": "io_metadata",
-                                                                    "metadata": [
-                                                                        {
-                                                                            "metaName": "DisplayMode",
-                                                                            "metaType": "string",
-                                                                            "metaValue": "2"
-                                                                        },
-                                                                        {
-                                                                            "metaName": "LayoutPos",
-                                                                            "metaType": "string",
-                                                                            "metaValue": "-914 -76"
                                                                         }
                                                                     ]
                                                                 }
@@ -1173,32 +1121,12 @@
                                                                             "metaName": "output"
                                                                         }
                                                                     ]
-                                                                },
-                                                                {
-                                                                    "metaName": "io_metadata",
-                                                                    "metadata": [
-                                                                        {
-                                                                            "metaName": "DisplayMode",
-                                                                            "metaType": "string",
-                                                                            "metaValue": "2"
-                                                                        },
-                                                                        {
-                                                                            "metaName": "LayoutPos",
-                                                                            "metaType": "string",
-                                                                            "metaValue": "265.025 6.73792"
-                                                                        }
-                                                                    ]
                                                                 }
                                                             ]
                                                         }
                                                     ]
                                                 }
                                             ]
-                                        },
-                                        {
-                                            "metaName": "ViewportRect",
-                                            "metaType": "string",
-                                            "metaValue": "-1196.83 -316.508 1636.19 1062.35"
                                         }
                                     ],
                                     "ports": [
@@ -1284,6 +1212,16 @@
                                                     "metaName": "valuenode_defaultvalue",
                                                     "metaType": "string",
                                                     "metaValue": "0"
+                                                },
+                                                {
+                                                    "metaName": "valuenode_defaultvalue",
+                                                    "metaType": "string",
+                                                    "metaValue": "0"
+                                                },
+                                                {
+                                                    "metaName": "valuenode_defaultvalue",
+                                                    "metaType": "string",
+                                                    "metaValue": "1"
                                                 },
                                                 {
                                                     "metaName": "DisplayMode",
@@ -1489,6 +1427,16 @@
                                                     "metaValue": "0"
                                                 },
                                                 {
+                                                    "metaName": "valuenode_defaultvalue",
+                                                    "metaType": "string",
+                                                    "metaValue": "0"
+                                                },
+                                                {
+                                                    "metaName": "valuenode_defaultvalue",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
                                                     "metaName": "DisplayMode",
                                                     "metaType": "string",
                                                     "metaValue": "2"
@@ -1503,6 +1451,30 @@
                                     ],
                                     "connections": [
                                         {
+                                            "source": "add.output",
+                                            "target": "equal.first"
+                                        },
+                                        {
+                                            "source": "add.output",
+                                            "target": "if.false_case"
+                                        },
+                                        {
+                                            "source": "equal.output",
+                                            "target": "if.condition"
+                                        },
+                                        {
+                                            "source": "if.output",
+                                            "target": ".output"
+                                        },
+                                        {
+                                            "source": "multiply.output",
+                                            "target": "equal.second"
+                                        },
+                                        {
+                                            "source": "value.output",
+                                            "target": "multiply.first.output1"
+                                        },
+                                        {
                                             "source": ".current_index",
                                             "target": "add.first.current_index"
                                         },
@@ -1511,36 +1483,12 @@
                                             "target": "add.first.max_iterations"
                                         },
                                         {
-                                            "source": "add.output",
-                                            "target": "equal.first"
-                                        },
-                                        {
-                                            "source": "multiply.output",
-                                            "target": "equal.second"
-                                        },
-                                        {
-                                            "source": "equal.output",
-                                            "target": "if.condition"
-                                        },
-                                        {
                                             "source": ".max_iterations",
                                             "target": "if.true_case"
                                         },
                                         {
-                                            "source": "add.output",
-                                            "target": "if.false_case"
-                                        },
-                                        {
-                                            "source": "if.output",
-                                            "target": ".output"
-                                        },
-                                        {
                                             "source": ".max_iterations",
                                             "target": "multiply.first.max_iterations"
-                                        },
-                                        {
-                                            "source": "value.output",
-                                            "target": "multiply.first.output1"
                                         }
                                     ],
                                     "values": [
@@ -1666,12 +1614,20 @@
                                     "target": ".face"
                                 },
                                 {
+                                    "source": "fourth_face.output",
+                                    "target": "build_array.first.output2"
+                                },
+                                {
                                     "source": ".subdivisions",
                                     "target": "second_vertex_id.max_iterations"
                                 },
                                 {
                                     "source": ".subdivisions",
                                     "target": "third_vertex_id.first.max_iterations"
+                                },
+                                {
+                                    "source": ".subdivisions",
+                                    "target": "fourth_face.max_iterations"
                                 },
                                 {
                                     "source": ".current_index",
@@ -1684,14 +1640,6 @@
                                 {
                                     "source": ".current_index",
                                     "target": "fourth_face.current_index"
-                                },
-                                {
-                                    "source": ".subdivisions",
-                                    "target": "fourth_face.max_iterations"
-                                },
-                                {
-                                    "source": "fourth_face.output",
-                                    "target": "build_array.first.output2"
                                 }
                             ],
                             "values": [
@@ -1725,83 +1673,6 @@
                             "uriImported": "file:///bifrostGraph1",
                             "metadata": [
                                 {
-                                    "metaName": "io_nodes",
-                                    "metadata": [
-                                        {
-                                            "metaName": "io_inodes",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "input",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "io_metadata",
-                                                            "metadata": [
-                                                                {
-                                                                    "metaName": "DisplayMode",
-                                                                    "metaType": "string",
-                                                                    "metaValue": "2"
-                                                                },
-                                                                {
-                                                                    "metaName": "LayoutPos",
-                                                                    "metaType": "string",
-                                                                    "metaValue": "10 67"
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "metaName": "io_ports",
-                                                            "metadata": [
-                                                                {
-                                                                    "metaName": "subdivisions"
-                                                                },
-                                                                {
-                                                                    "metaName": "current_index"
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "metaName": "io_onodes",
-                                            "metadata": [
-                                                {
-                                                    "metaName": "output",
-                                                    "metadata": [
-                                                        {
-                                                            "metaName": "io_metadata",
-                                                            "metadata": [
-                                                                {
-                                                                    "metaName": "DisplayMode",
-                                                                    "metaType": "string",
-                                                                    "metaValue": "2"
-                                                                },
-                                                                {
-                                                                    "metaName": "LayoutPos",
-                                                                    "metaType": "string",
-                                                                    "metaValue": "946.359 119.501"
-                                                                }
-                                                            ]
-                                                        },
-                                                        {
-                                                            "metaName": "io_ports",
-                                                            "metadata": [
-                                                                {
-                                                                    "metaName": "top_face"
-                                                                },
-                                                                {
-                                                                    "metaName": "bottom_face"
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                },
-                                {
                                     "metaName": "_recentNode_",
                                     "metaType": "string",
                                     "metaValue": "BifrostGraph,Core::Math,add"
@@ -1830,6 +1701,53 @@
                                     "metaName": "ViewportRect",
                                     "metaType": "string",
                                     "metaValue": "-29.3786 -126.886 1519.44 986.538"
+                                },
+                                {
+                                    "metaName": "io_nodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_inodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "input",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "subdivisions"
+                                                                },
+                                                                {
+                                                                    "metaName": "current_index"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_onodes",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "io_ports",
+                                                            "metadata": [
+                                                                {
+                                                                    "metaName": "top_face"
+                                                                },
+                                                                {
+                                                                    "metaName": "bottom_face"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ],
                             "ports": [
@@ -1914,10 +1832,6 @@
                             ],
                             "connections": [
                                 {
-                                    "source": ".current_index",
-                                    "target": "to_unsigned_int.from"
-                                },
-                                {
                                     "source": "to_unsigned_int.unsigned_int",
                                     "target": ".top_face"
                                 },
@@ -1926,16 +1840,20 @@
                                     "target": ".bottom_face"
                                 },
                                 {
-                                    "source": ".current_index",
-                                    "target": "add.first.current_index"
-                                },
-                                {
                                     "source": "add.output",
                                     "target": "to_unsigned_int1.from"
                                 },
                                 {
                                     "source": ".subdivisions",
                                     "target": "add.first.subdivisions"
+                                },
+                                {
+                                    "source": ".current_index",
+                                    "target": "to_unsigned_int.from"
+                                },
+                                {
+                                    "source": ".current_index",
+                                    "target": "add.first.current_index"
                                 }
                             ],
                             "values": [],
@@ -2001,14 +1919,6 @@
                     ],
                     "connections": [
                         {
-                            "source": ".subdivisions",
-                            "target": "compute_border_faces.subdivisions"
-                        },
-                        {
-                            "source": ".subdivisions",
-                            "target": "compute_caps.subdivisions"
-                        },
-                        {
                             "source": "compute_border_faces.face",
                             "target": "all_faces.first.face"
                         },
@@ -2023,6 +1933,14 @@
                         {
                             "source": "all_faces.array",
                             "target": ".all_faces"
+                        },
+                        {
+                            "source": ".subdivisions",
+                            "target": "compute_border_faces.subdivisions"
+                        },
+                        {
+                            "source": ".subdivisions",
+                            "target": "compute_caps.subdivisions"
                         }
                     ],
                     "values": [
@@ -2040,7 +1958,7 @@
                 },
                 {
                     "name": "construct_mesh_from_nested_faces",
-                    "uriImported": "file:///primitive_cylinder.json",
+                    "uriImported": "file:///bifrostGraph1",
                     "metadata": [
                         {
                             "metaName": "io_nodes",
@@ -2105,7 +2023,7 @@
                     "compounds": [
                         {
                             "name": "compute_face_offset",
-                            "uriImported": "file:///primitive_cylinder.json",
+                            "uriImported": "file:///bifrostGraph1",
                             "metadata": [
                                 {
                                     "metaName": "io_nodes",
@@ -2169,7 +2087,7 @@
                             "compounds": [
                                 {
                                     "name": "iterate",
-                                    "uriImported": "file:///primitive_cylinder.json",
+                                    "uriImported": "file:///bifrostGraph1",
                                     "metadata": [
                                         {
                                             "metaName": "_recentNode_",
@@ -2461,6 +2379,11 @@
                                             "metaValue": "0"
                                         },
                                         {
+                                            "metaName": "valuenode_defaultvalue",
+                                            "metaType": "string",
+                                            "metaValue": "0"
+                                        },
+                                        {
                                             "metaName": "DisplayMode",
                                             "metaType": "string",
                                             "metaValue": "2"
@@ -2513,7 +2436,7 @@
                         },
                         {
                             "name": "compute_face_vertex",
-                            "uriImported": "file:///primitive_cylinder.json",
+                            "uriImported": "file:///bifrostGraph1",
                             "metadata": [
                                 {
                                     "metaName": "icon",
@@ -2580,7 +2503,7 @@
                             "compounds": [
                                 {
                                     "name": "iterate",
-                                    "uriImported": "file:///primitive_cylinder.json",
+                                    "uriImported": "file:///bifrostGraph1",
                                     "metadata": [
                                         {
                                             "metaName": "_recentNode_",
@@ -2803,8 +2726,20 @@
                     ],
                     "connections": [
                         {
+                            "source": "compute_face_offset.face_offset",
+                            "target": "construct_mesh.face_offset"
+                        },
+                        {
                             "source": "compute_face_vertex.flattened_array",
                             "target": "compute_face_offset.face_vertex"
+                        },
+                        {
+                            "source": "compute_face_vertex.flattened_array",
+                            "target": "construct_mesh.face_vertex"
+                        },
+                        {
+                            "source": "construct_mesh.mesh",
+                            "target": ".mesh"
                         },
                         {
                             "source": ".nested_faces",
@@ -2817,25 +2752,13 @@
                         {
                             "source": ".point_position",
                             "target": "construct_mesh.point_position"
-                        },
-                        {
-                            "source": "compute_face_offset.face_offset",
-                            "target": "construct_mesh.face_offset"
-                        },
-                        {
-                            "source": "compute_face_vertex.flattened_array",
-                            "target": "construct_mesh.face_vertex"
-                        },
-                        {
-                            "source": "construct_mesh.mesh",
-                            "target": ".mesh"
                         }
                     ],
                     "values": []
                 },
                 {
                     "name": "compute_points",
-                    "uriImported": "file:///primitive_cylinder.json",
+                    "uriImported": "file:///bifrostGraph1",
                     "metadata": [
                         {
                             "metaName": "io_nodes",
@@ -2899,10 +2822,6 @@
                             "portDirection": "input"
                         },
                         {
-                            "portName": "point_positions",
-                            "portDirection": "output"
-                        },
-                        {
                             "portName": "height",
                             "portDirection": "input",
                             "portType": "float"
@@ -2911,12 +2830,16 @@
                             "portName": "negative_height",
                             "portDirection": "input",
                             "portType": "float"
+                        },
+                        {
+                            "portName": "point_positions",
+                            "portDirection": "output"
                         }
                     ],
                     "compounds": [
                         {
                             "name": "bottom_circle_points",
-                            "uriImported": "file:///primitive_cylinder.json",
+                            "uriImported": "file:///bifrostGraph1",
                             "metadata": [
                                 {
                                     "metaName": "_recentNode_",
@@ -3017,6 +2940,21 @@
                                             "metaValue": "backdrop"
                                         },
                                         {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
+                                        {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
+                                        {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
+                                        {
                                             "metaName": "text",
                                             "metaType": "string",
                                             "metaValue": "current vertex coordinates"
@@ -3031,6 +2969,21 @@
                                 {
                                     "metaName": "backdrop1",
                                     "metadata": [
+                                        {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
+                                        {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
+                                        {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
                                         {
                                             "metaName": "type",
                                             "metaType": "string",
@@ -3090,7 +3043,7 @@
                             "compounds": [
                                 {
                                     "name": "angle",
-                                    "uriImported": "file:///primitive_cylinder.json",
+                                    "uriImported": "file:///bifrostGraph1",
                                     "metadata": [
                                         {
                                             "metaName": "ViewportRect",
@@ -3160,6 +3113,21 @@
                                                     "metaValue": "backdrop"
                                                 },
                                                 {
+                                                    "metaName": "type",
+                                                    "metaType": "string",
+                                                    "metaValue": "backdrop"
+                                                },
+                                                {
+                                                    "metaName": "type",
+                                                    "metaType": "string",
+                                                    "metaValue": "backdrop"
+                                                },
+                                                {
+                                                    "metaName": "type",
+                                                    "metaType": "string",
+                                                    "metaValue": "backdrop"
+                                                },
+                                                {
                                                     "metaName": "text",
                                                     "metaType": "string",
                                                     "metaValue": "angle from the first base vertex to the curent one."
@@ -3191,7 +3159,7 @@
                                     "compounds": [
                                         {
                                             "name": "theta",
-                                            "uriImported": "file:///primitive_cylinder.json",
+                                            "uriImported": "file:///bifrostGraph1",
                                             "metadata": [
                                                 {
                                                     "metaName": "ViewportRect",
@@ -3242,6 +3210,21 @@
                                                 {
                                                     "metaName": "backdrop",
                                                     "metadata": [
+                                                        {
+                                                            "metaName": "type",
+                                                            "metaType": "string",
+                                                            "metaValue": "backdrop"
+                                                        },
+                                                        {
+                                                            "metaName": "type",
+                                                            "metaType": "string",
+                                                            "metaValue": "backdrop"
+                                                        },
+                                                        {
+                                                            "metaName": "type",
+                                                            "metaType": "string",
+                                                            "metaValue": "backdrop"
+                                                        },
                                                         {
                                                             "metaName": "type",
                                                             "metaType": "string",
@@ -3348,6 +3331,21 @@
                                                             "metaValue": "0"
                                                         },
                                                         {
+                                                            "metaName": "valuenode_defaultvalue",
+                                                            "metaType": "string",
+                                                            "metaValue": "0"
+                                                        },
+                                                        {
+                                                            "metaName": "valuenode_defaultvalue",
+                                                            "metaType": "string",
+                                                            "metaValue": "0"
+                                                        },
+                                                        {
+                                                            "metaName": "valuenode_defaultvalue",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
                                                             "metaName": "DisplayMode",
                                                             "metaType": "string",
                                                             "metaValue": "2"
@@ -3356,11 +3354,6 @@
                                                             "metaName": "LayoutPos",
                                                             "metaType": "string",
                                                             "metaValue": "38.8449 216.358"
-                                                        },
-                                                        {
-                                                            "metaName": "valuenode_defaultvalue",
-                                                            "metaType": "string",
-                                                            "metaValue": "2"
                                                         }
                                                     ]
                                                 }
@@ -3655,7 +3648,7 @@
                         },
                         {
                             "name": "top_circle_points",
-                            "uriImported": "file:///primitive_cylinder.json",
+                            "uriImported": "file:///bifrostGraph1",
                             "metadata": [
                                 {
                                     "metaName": "_recentNode_",
@@ -3751,6 +3744,21 @@
                                             "metaValue": "backdrop"
                                         },
                                         {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
+                                        {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
+                                        {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
+                                        {
                                             "metaName": "text",
                                             "metaType": "string",
                                             "metaValue": "current vertex coordinates"
@@ -3765,6 +3773,21 @@
                                 {
                                     "metaName": "backdrop1",
                                     "metadata": [
+                                        {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
+                                        {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
+                                        {
+                                            "metaName": "type",
+                                            "metaType": "string",
+                                            "metaValue": "backdrop"
+                                        },
                                         {
                                             "metaName": "type",
                                             "metaType": "string",
@@ -3819,7 +3842,7 @@
                             "compounds": [
                                 {
                                     "name": "angle",
-                                    "uriImported": "file:///primitive_cylinder.json",
+                                    "uriImported": "file:///bifrostGraph1",
                                     "metadata": [
                                         {
                                             "metaName": "ViewportRect",
@@ -3884,6 +3907,21 @@
                                                     "metaValue": "backdrop"
                                                 },
                                                 {
+                                                    "metaName": "type",
+                                                    "metaType": "string",
+                                                    "metaValue": "backdrop"
+                                                },
+                                                {
+                                                    "metaName": "type",
+                                                    "metaType": "string",
+                                                    "metaValue": "backdrop"
+                                                },
+                                                {
+                                                    "metaName": "type",
+                                                    "metaType": "string",
+                                                    "metaValue": "backdrop"
+                                                },
+                                                {
                                                     "metaName": "text",
                                                     "metaType": "string",
                                                     "metaValue": "angle from the first base vertex to the curent one."
@@ -3915,7 +3953,7 @@
                                     "compounds": [
                                         {
                                             "name": "theta",
-                                            "uriImported": "file:///primitive_cylinder.json",
+                                            "uriImported": "file:///bifrostGraph1",
                                             "metadata": [
                                                 {
                                                     "metaName": "ViewportRect",
@@ -3966,6 +4004,21 @@
                                                 {
                                                     "metaName": "backdrop",
                                                     "metadata": [
+                                                        {
+                                                            "metaName": "type",
+                                                            "metaType": "string",
+                                                            "metaValue": "backdrop"
+                                                        },
+                                                        {
+                                                            "metaName": "type",
+                                                            "metaType": "string",
+                                                            "metaValue": "backdrop"
+                                                        },
+                                                        {
+                                                            "metaName": "type",
+                                                            "metaType": "string",
+                                                            "metaValue": "backdrop"
+                                                        },
                                                         {
                                                             "metaName": "type",
                                                             "metaType": "string",
@@ -4067,6 +4120,21 @@
                                                             "metaValue": "0"
                                                         },
                                                         {
+                                                            "metaName": "valuenode_defaultvalue",
+                                                            "metaType": "string",
+                                                            "metaValue": "0"
+                                                        },
+                                                        {
+                                                            "metaName": "valuenode_defaultvalue",
+                                                            "metaType": "string",
+                                                            "metaValue": "0"
+                                                        },
+                                                        {
+                                                            "metaName": "valuenode_defaultvalue",
+                                                            "metaType": "string",
+                                                            "metaValue": "2"
+                                                        },
+                                                        {
                                                             "metaName": "DisplayMode",
                                                             "metaType": "string",
                                                             "metaValue": "2"
@@ -4075,11 +4143,6 @@
                                                             "metaName": "LayoutPos",
                                                             "metaType": "string",
                                                             "metaValue": "38.8449 216.358"
-                                                        },
-                                                        {
-                                                            "metaName": "valuenode_defaultvalue",
-                                                            "metaType": "string",
-                                                            "metaValue": "2"
                                                         }
                                                     ]
                                                 }
@@ -4429,24 +4492,12 @@
                     ],
                     "connections": [
                         {
-                            "source": ".subdivisions",
-                            "target": "bottom_circle_points.subdivisions"
-                        },
-                        {
-                            "source": ".radius",
-                            "target": "bottom_circle_points.radius"
-                        },
-                        {
-                            "source": ".negative_height",
-                            "target": "bottom_circle_points.height"
+                            "source": "bottom_circle_points.points_position",
+                            "target": "build_array.first.points_position1"
                         },
                         {
                             "source": "top_circle_points.points_position",
                             "target": "build_array.first.points_position"
-                        },
-                        {
-                            "source": "bottom_circle_points.points_position",
-                            "target": "build_array.first.points_position1"
                         },
                         {
                             "source": "build_array.array",
@@ -4454,7 +4505,15 @@
                         },
                         {
                             "source": ".subdivisions",
+                            "target": "bottom_circle_points.subdivisions"
+                        },
+                        {
+                            "source": ".subdivisions",
                             "target": "top_circle_points.subdivisions"
+                        },
+                        {
+                            "source": ".radius",
+                            "target": "bottom_circle_points.radius"
                         },
                         {
                             "source": ".radius",
@@ -4463,6 +4522,10 @@
                         {
                             "source": ".height",
                             "target": "top_circle_points.height"
+                        },
+                        {
+                            "source": ".negative_height",
+                            "target": "bottom_circle_points.height"
                         }
                     ],
                     "values": [
@@ -4534,7 +4597,7 @@
                         {
                             "metaName": "LayoutPos",
                             "metaType": "string",
-                            "metaValue": "273.114 511.466"
+                            "metaValue": "333.854 544.656"
                         }
                     ]
                 },
@@ -4589,28 +4652,8 @@
             ],
             "connections": [
                 {
-                    "source": ".subdivisions",
-                    "target": "ensure_minimum_subdivisions.input"
-                },
-                {
-                    "source": ".radius",
-                    "target": "ensure_positive_radius.input"
-                },
-                {
-                    "source": ".height",
-                    "target": "compute_height.height"
-                },
-                {
                     "source": "ensure_minimum_subdivisions.output",
                     "target": "compute_faces.subdivisions"
-                },
-                {
-                    "source": "compute_faces.all_faces",
-                    "target": "construct_mesh_from_nested_faces.nested_faces"
-                },
-                {
-                    "source": "construct_mesh_from_nested_faces.mesh",
-                    "target": ".mesh"
                 },
                 {
                     "source": "ensure_minimum_subdivisions.output",
@@ -4621,16 +4664,40 @@
                     "target": "compute_points.radius"
                 },
                 {
-                    "source": "compute_height.negative",
+                    "source": "compute_height.top_height",
+                    "target": "compute_points.height"
+                },
+                {
+                    "source": "compute_height.bottom_height",
                     "target": "compute_points.negative_height"
+                },
+                {
+                    "source": "compute_faces.all_faces",
+                    "target": "construct_mesh_from_nested_faces.nested_faces"
+                },
+                {
+                    "source": "construct_mesh_from_nested_faces.mesh",
+                    "target": ".mesh"
                 },
                 {
                     "source": "compute_points.point_positions",
                     "target": "construct_mesh_from_nested_faces.point_position"
                 },
                 {
-                    "source": "compute_height.positive",
-                    "target": "compute_points.height"
+                    "source": ".subdivisions",
+                    "target": "ensure_minimum_subdivisions.input"
+                },
+                {
+                    "source": ".height",
+                    "target": "compute_height.height"
+                },
+                {
+                    "source": ".radius",
+                    "target": "ensure_positive_radius.input"
+                },
+                {
+                    "source": ".center_pivot",
+                    "target": "compute_height.center_pivot"
                 }
             ],
             "values": [
