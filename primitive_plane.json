@@ -1077,7 +1077,7 @@
             ]
         },
         {
-            "name": "Muream::Primitive::primitive_plane",
+            "name": "LP::Mesh::Primitives::primitive_plane",
             "uriImported": "file:///primitive_plane.json",
             "metadata": [
                 {

@@ -11,7 +11,7 @@
     "types": [],
     "compounds": [
         {
-            "name": "Muream::Mesh::compute_face_vertex",
+            "name": "LP::Mesh::compute_face_vertex",
             "uriImported": "file:///flatten_nested_array.json",
             "metadata": [
                 {

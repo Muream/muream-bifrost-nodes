@@ -49,7 +49,7 @@
     "types": [],
     "compounds": [
         {
-            "name": "Muream::Mesh::compute_face_offset",
+            "name": "LP::Mesh::compute_face_offset",
             "uriImported": "file:///compute_face_offset.json",
             "metadata": [
                 {

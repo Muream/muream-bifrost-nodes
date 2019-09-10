@@ -97,7 +97,7 @@
     "types": [],
     "compounds": [
         {
-            "name": "Muream::Mesh::Primitives::primitive_cylinder",
+            "name": "LP::Mesh::Primitives::primitive_cylinder",
             "uriImported": "file:///bifrostGraph1",
             "metadata": [
                 {

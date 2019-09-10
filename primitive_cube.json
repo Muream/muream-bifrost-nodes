@@ -88,7 +88,7 @@
     "types": [],
     "compounds": [
         {
-            "name": "Muream::Primitive::primitive_cube",
+            "name": "LP::Mesh::Primitives::primitive_cube",
             "uriImported": "file:///primitive_plane.json",
             "metadata": [
                 {

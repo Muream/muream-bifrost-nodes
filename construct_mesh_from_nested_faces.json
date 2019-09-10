@@ -82,7 +82,7 @@
     "types": [],
     "compounds": [
         {
-            "name": "Muream::Mesh::construct_mesh_from_nested_faces",
+            "name": "LP::Mesh::construct_mesh_from_nested_faces",
             "uriImported": "file:///construct_mesh_from_nested_faces.json",
             "metadata": [
                 {
@@ -104,6 +104,21 @@
                                                     "metaName": "point_position"
                                                 }
                                             ]
+                                        },
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "10 124"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -122,18 +137,39 @@
                                                     "metaName": "mesh"
                                                 }
                                             ]
+                                        },
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "1230 112"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
                             ]
                         }
                     ]
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-70 -327.871 1606 1042.74"
                 }
             ],
             "ports": [
                 {
                     "portName": "nested_faces",
-                    "portDirection": "input"
+                    "portDirection": "input",
+                    "portType": "array<array<uint>>"
                 },
                 {
                     "portName": "point_position",
@@ -807,7 +843,7 @@
                         {
                             "metaName": "LayoutPos",
                             "metaType": "string",
-                            "metaValue": "1132.19 -279.201"
+                            "metaValue": "620 9"
                         }
                     ]
                 },
@@ -823,7 +859,7 @@
                         {
                             "metaName": "LayoutPos",
                             "metaType": "string",
-                            "metaValue": "1003.65 -581.965"
+                            "metaValue": "315 154"
                         }
                     ]
                 },
@@ -839,7 +875,7 @@
                         {
                             "metaName": "LayoutPos",
                             "metaType": "string",
-                            "metaValue": "2077.07 79.397"
+                            "metaValue": "925 80.8977"
                         }
                     ]
                 }
@@ -848,14 +884,6 @@
                 {
                     "source": "compute_face_vertex.flattened_array",
                     "target": "compute_face_offset.face_vertex"
-                },
-                {
-                    "source": ".nested_faces",
-                    "target": "compute_face_offset.nested_faces"
-                },
-                {
-                    "source": ".nested_faces",
-                    "target": "compute_face_vertex.nested_faces"
                 },
                 {
                     "source": ".point_position",
@@ -872,6 +900,14 @@
                 {
                     "source": "construct_mesh.mesh",
                     "target": ".mesh"
+                },
+                {
+                    "source": ".nested_faces",
+                    "target": "compute_face_offset.nested_faces"
+                },
+                {
+                    "source": ".nested_faces",
+                    "target": "compute_face_vertex.nested_faces"
                 }
             ],
             "values": []
