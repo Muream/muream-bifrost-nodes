@@ -1,0 +1,412 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///bifrost_object_i.json"
+        },
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///bifrost_geometry_query_types.json"
+        },
+        {
+            "uri": "file:///geometry_types.json"
+        },
+        {
+            "uri": "file:///set_property_any.json"
+        },
+        {
+            "uri": "file:///set_property.json"
+        },
+        {
+            "uri": "file:///has_property.json"
+        },
+        {
+            "uri": "file:///get_property_any.json"
+        },
+        {
+            "uri": "file:///get_property.json"
+        },
+        {
+            "uri": "file:///get_property_keys.json"
+        },
+        {
+            "uri": "file:///is_empty.json"
+        },
+        {
+            "uri": "file:///materials.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///Math_constants.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///Math_degrees_to_radians.json"
+        },
+        {
+            "uri": "file:///set_sub_object_property.json"
+        },
+        {
+            "uri": "file:///CoreArrayOps.json"
+        },
+        {
+            "uri": "file:///create_object_from_schema.json"
+        },
+        {
+            "uri": "file:///construct_mesh.json"
+        },
+        {
+            "uri": "file:///fluids_types.json"
+        },
+        {
+            "uri": "file:///FCurve.json"
+        },
+        {
+            "uri": "file:///fluids_nodedefs.json"
+        },
+        {
+            "uri": "file:///primitive_cone.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "LP::helpers::draw_angle_cone",
+            "uriImported": "file:///draw_angle_cone.json",
+            "metadata": [
+                {
+                    "metaName": "backdrop1",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Assign a constant material"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "274.363 312.322 550 420"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "subdivisions"
+                                                },
+                                                {
+                                                    "metaName": "height"
+                                                },
+                                                {
+                                                    "metaName": "angle"
+                                                },
+                                                {
+                                                    "metaName": "flip"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-388.366 370.218"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "out_geometry"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "957.269 427.681"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-404.771 -28.1203 1738.55 1128.81"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "out_geometry",
+                    "portDirection": "output",
+                    "portType": "Amino::Object"
+                },
+                {
+                    "portName": "subdivisions",
+                    "portDirection": "input",
+                    "portType": "long",
+                    "portDefault": "32"
+                },
+                {
+                    "portName": "height",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "5f"
+                },
+                {
+                    "portName": "angle",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "45f"
+                },
+                {
+                    "portName": "flip",
+                    "portDirection": "input",
+                    "portType": "bool",
+                    "portDefault": "true"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "assign_material",
+                    "nodeType": "Rendering::Materials::assign_material",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "584.586 325.582"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "constant_surface_mat",
+                    "nodeType": "Rendering::Materials::constant_surface_mat",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "279.586 507.582"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "primitive_cone",
+                    "nodeType": "LP::Mesh::Primitives::primitive_cone",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-34.7398 350.711"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "primitive_cone.mesh",
+                    "target": "assign_material.geometry"
+                },
+                {
+                    "source": "constant_surface_mat.material_definition",
+                    "target": "assign_material.surface_material"
+                },
+                {
+                    "source": "assign_material.out_geometry",
+                    "target": ".out_geometry"
+                },
+                {
+                    "source": ".subdivisions",
+                    "target": "primitive_cone.subdivisions"
+                },
+                {
+                    "source": ".height",
+                    "target": "primitive_cone.height"
+                },
+                {
+                    "source": ".angle",
+                    "target": "primitive_cone.angle"
+                },
+                {
+                    "source": ".flip",
+                    "target": "primitive_cone.flip"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "assign_material.geometry",
+                    "valueType": "Amino::Object",
+                    "value": {}
+                },
+                {
+                    "valueName": "assign_material.set_surface",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "assign_material.set_displacement",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "assign_material.set_volume",
+                    "valueType": "bool",
+                    "value": "true"
+                },
+                {
+                    "valueName": "constant_surface_mat.name",
+                    "valueType": "string",
+                    "value": ""
+                },
+                {
+                    "valueName": "constant_surface_mat.color",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0f",
+                        "y": "0.5f",
+                        "z": "1f"
+                    }
+                },
+                {
+                    "valueName": "constant_surface_mat.transparency",
+                    "valueType": "Math::float3",
+                    "value": {
+                        "x": "0.75f",
+                        "y": "0.75f",
+                        "z": "0.75f"
+                    }
+                },
+                {
+                    "valueName": "primitive_cone.subdivisions",
+                    "valueType": "long",
+                    "value": "32"
+                },
+                {
+                    "valueName": "primitive_cone.height",
+                    "valueType": "float",
+                    "value": "5f"
+                },
+                {
+                    "valueName": "primitive_cone.angle",
+                    "valueType": "float",
+                    "value": "45f"
+                },
+                {
+                    "valueName": "primitive_cone.flip",
+                    "valueType": "bool",
+                    "value": "true"
+                }
+            ]
+        }
+    ]
+}
