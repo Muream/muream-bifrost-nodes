@@ -1,0 +1,629 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_degrees_to_radians.json"
+        },
+        {
+            "uri": "file:///Math_multiply_quaternions.json"
+        },
+        {
+            "uri": "file:///Math_euler_to_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_rotate_by_quaternion.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "LP::Transform::transform_points",
+            "uriImported": "file:///transform_points.json",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "points_positions"
+                                                },
+                                                {
+                                                    "metaName": "translateX"
+                                                },
+                                                {
+                                                    "metaName": "translateY"
+                                                },
+                                                {
+                                                    "metaName": "translateZ"
+                                                },
+                                                {
+                                                    "metaName": "rotateX"
+                                                },
+                                                {
+                                                    "metaName": "rotateY"
+                                                },
+                                                {
+                                                    "metaName": "rotateZ"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "UILayout",
+                    "metaType": "string",
+                    "metaValue": "{\n    \"NodeLayout\": {\n        \"hideUndeclaredPorts\": false,\n        \"items\": [\n            {\n                \"port\": \"points_positions\"\n            },\n            {\n                \"expanded\": true,\n                \"group\": \"translate\",\n                \"items\": [\n                    {\n                        \"port\": \"translateX\"\n                    },\n                    {\n                        \"port\": \"translateY\"\n                    },\n                    {\n                        \"port\": \"translateZ\"\n                    }\n                ]\n            },\n            {\n                \"expanded\": true,\n                \"group\": \"rotate\",\n                \"items\": [\n                    {\n                        \"port\": \"rotateX\"\n                    },\n                    {\n                        \"port\": \"rotateY\"\n                    },\n                    {\n                        \"port\": \"rotateZ\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "points_positions",
+                    "portDirection": "input"
+                },
+                {
+                    "portName": "translateX",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "translateY",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "translateZ",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "output",
+                    "portDirection": "output"
+                },
+                {
+                    "portName": "rotateX",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "rotateY",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "rotateZ",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                }
+            ],
+            "compounds": [
+                {
+                    "name": "rotate_points",
+                    "uriImported": "file:///transform_points.json",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "points_positions"
+                                                        },
+                                                        {
+                                                            "metaName": "rotateX"
+                                                        },
+                                                        {
+                                                            "metaName": "rotateY"
+                                                        },
+                                                        {
+                                                            "metaName": "rotateZ"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "rotated_vector"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "points_positions",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "rotateX",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "rotateY",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "rotateZ",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "rotated_vector",
+                            "portDirection": "output"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "degrees_to_radians",
+                            "nodeType": "Core::Conversion::degrees_to_radians",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-476.111 118.003"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "euler_to_quaternion",
+                            "nodeType": "Core::Math::euler_to_quaternion",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-167.5 197"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "rotate_by_quaternion",
+                            "nodeType": "Core::Math::rotate_by_quaternion",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "90.5 84"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "scalar_to_vector3",
+                            "nodeType": "Core::Conversion::scalar_to_vector3",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-733.525 -48.6884"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "degrees_to_radians.radians",
+                            "target": "euler_to_quaternion.euler_radians"
+                        },
+                        {
+                            "source": "euler_to_quaternion.quaternion",
+                            "target": "rotate_by_quaternion.quaternion"
+                        },
+                        {
+                            "source": "rotate_by_quaternion.rotated_vector",
+                            "target": ".rotated_vector"
+                        },
+                        {
+                            "source": "scalar_to_vector3.vector3",
+                            "target": "degrees_to_radians.degrees"
+                        },
+                        {
+                            "source": ".points_positions",
+                            "target": "rotate_by_quaternion.vector"
+                        },
+                        {
+                            "source": ".rotateX",
+                            "target": "scalar_to_vector3.x"
+                        },
+                        {
+                            "source": ".rotateY",
+                            "target": "scalar_to_vector3.y"
+                        },
+                        {
+                            "source": ".rotateZ",
+                            "target": "scalar_to_vector3.z"
+                        }
+                    ],
+                    "values": [
+                        {
+                            "valueName": "euler_to_quaternion.euler_radians",
+                            "valueType": "Math::float3",
+                            "value": {
+                                "x": "90f",
+                                "y": "0f",
+                                "z": "0f"
+                            }
+                        },
+                        {
+                            "valueName": "scalar_to_vector3.x",
+                            "valueType": "float",
+                            "value": "90f"
+                        }
+                    ]
+                },
+                {
+                    "name": "translate_points",
+                    "uriImported": "file:///transform_points.json",
+                    "metadata": [
+                        {
+                            "metaName": "io_nodes",
+                            "metadata": [
+                                {
+                                    "metaName": "io_inodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "input",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "point_position"
+                                                        },
+                                                        {
+                                                            "metaName": "translateX"
+                                                        },
+                                                        {
+                                                            "metaName": "translateY"
+                                                        },
+                                                        {
+                                                            "metaName": "translateZ"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "metaName": "io_onodes",
+                                    "metadata": [
+                                        {
+                                            "metaName": "output",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "io_ports",
+                                                    "metadata": [
+                                                        {
+                                                            "metaName": "output"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "ports": [
+                        {
+                            "portName": "point_position",
+                            "portDirection": "input"
+                        },
+                        {
+                            "portName": "translateX",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "translateY",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "translateZ",
+                            "portDirection": "input",
+                            "portType": "float"
+                        },
+                        {
+                            "portName": "output",
+                            "portDirection": "output"
+                        }
+                    ],
+                    "compoundNodes": [
+                        {
+                            "nodeName": "add",
+                            "nodeType": "Core::Math::add",
+                            "multiInPortNames": [
+                                "point_position",
+                                "output1"
+                            ],
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-521.198 60.4103"
+                                }
+                            ]
+                        },
+                        {
+                            "nodeName": "scalar_to_vector3",
+                            "nodeType": "Core::Conversion::scalar_to_vector3",
+                            "metadata": [
+                                {
+                                    "metaName": "DisplayMode",
+                                    "metaType": "string",
+                                    "metaValue": "2"
+                                },
+                                {
+                                    "metaName": "LayoutPos",
+                                    "metaType": "string",
+                                    "metaValue": "-831.542 180.034"
+                                }
+                            ]
+                        }
+                    ],
+                    "connections": [
+                        {
+                            "source": "add.output",
+                            "target": ".output"
+                        },
+                        {
+                            "source": "scalar_to_vector3.vector3",
+                            "target": "add.first.output1"
+                        },
+                        {
+                            "source": ".point_position",
+                            "target": "add.first.point_position"
+                        },
+                        {
+                            "source": ".translateX",
+                            "target": "scalar_to_vector3.x"
+                        },
+                        {
+                            "source": ".translateY",
+                            "target": "scalar_to_vector3.y"
+                        },
+                        {
+                            "source": ".translateZ",
+                            "target": "scalar_to_vector3.z"
+                        }
+                    ],
+                    "values": []
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "rotate_points",
+                    "nodeType": "rotate_points",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-451.808 -44.3429"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "translate_points",
+                    "nodeType": "translate_points",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-158.746 -287.058"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": ".points_positions",
+                    "target": "rotate_points.points_positions"
+                },
+                {
+                    "source": ".rotateX",
+                    "target": "rotate_points.rotateX"
+                },
+                {
+                    "source": ".rotateY",
+                    "target": "rotate_points.rotateY"
+                },
+                {
+                    "source": ".rotateZ",
+                    "target": "rotate_points.rotateZ"
+                },
+                {
+                    "source": "rotate_points.rotated_vector",
+                    "target": "translate_points.point_position"
+                },
+                {
+                    "source": ".translateX",
+                    "target": "translate_points.translateX"
+                },
+                {
+                    "source": ".translateY",
+                    "target": "translate_points.translateY"
+                },
+                {
+                    "source": ".translateZ",
+                    "target": "translate_points.translateZ"
+                },
+                {
+                    "source": "translate_points.output",
+                    "target": ".output"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "rotate_points.rotateX",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "rotate_points.rotateY",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "rotate_points.rotateZ",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "translate_points.translateX",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "translate_points.translateY",
+                    "valueType": "float",
+                    "value": "0f"
+                },
+                {
+                    "valueName": "translate_points.translateZ",
+                    "valueType": "float",
+                    "value": "0f"
+                }
+            ]
+        }
+    ]
+}
