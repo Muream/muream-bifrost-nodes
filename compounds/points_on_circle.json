@@ -1,0 +1,285 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        },
+        {
+            "uri": "file:///Math_conversion.json"
+        },
+        {
+            "uri": "file:///point_on_circle.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "LP::math::points_on_circle",
+            "uriImported": "file:///bifrostGraph1",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-864.916 -50.6406"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "max_iterations"
+                                                },
+                                                {
+                                                    "metaName": "current_index"
+                                                },
+                                                {
+                                                    "metaName": "angle_offset"
+                                                },
+                                                {
+                                                    "metaName": "radius"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "663.625 -45.4802"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,LP::math,point_on_circle"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Type_Conversion,to_float"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::String,string_to_float"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,multiply"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,divide"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-793.499 -388.848 1631.67 938.098"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "max_iterations",
+                    "portDirection": "input",
+                    "portType": "long",
+                    "portDefault": "10",
+                    "portIterationLimit": "true"
+                },
+                {
+                    "portName": "current_index",
+                    "portDirection": "input",
+                    "portType": "long",
+                    "portIterationCounter": "true"
+                },
+                {
+                    "portName": "angle_offset",
+                    "portDirection": "input",
+                    "portType": "float"
+                },
+                {
+                    "portName": "radius",
+                    "portDirection": "input",
+                    "portType": "float"
+                },
+                {
+                    "portName": "output",
+                    "portDirection": "output",
+                    "portIterationTarget": "true"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "multiply",
+                    "nodeType": "Core::Math::multiply",
+                    "multiInPortNames": [
+                        "angle_offset",
+                        "current_index"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-449.664 -204.867"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "to_float",
+                    "nodeType": "Core::Type_Conversion::to_float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-35.2884 -293.053"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "point_on_circle1",
+                    "nodeType": "LP::math::point_on_circle",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "207.948 -74.1677"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": ".current_index",
+                    "target": "multiply.first.current_index"
+                },
+                {
+                    "source": ".angle_offset",
+                    "target": "multiply.first.angle_offset"
+                },
+                {
+                    "source": "multiply.output",
+                    "target": "to_float.from"
+                },
+                {
+                    "source": "to_float.float",
+                    "target": "point_on_circle1.angle"
+                },
+                {
+                    "source": ".radius",
+                    "target": "point_on_circle1.radius"
+                },
+                {
+                    "source": "point_on_circle1.output",
+                    "target": ".output"
+                }
+            ],
+            "values": [],
+            "iterateCompound": {
+                "ports": []
+            }
+        }
+    ]
+}

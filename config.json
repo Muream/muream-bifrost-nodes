@@ -1,0 +1,14 @@
+{
+    "AminoConfigurations": [
+        {
+            "libraryName": "Muream Bifrost Nodes",
+            "libraryVersion": "1.0.0",
+            "jsonLibs": [
+                {
+                    "path": "compounds",
+                    "files": []
+                }
+            ]
+        }
+    ]
+}

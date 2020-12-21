@@ -1,0 +1,806 @@
+{
+    "header": {
+        "metadata": [
+            {
+                "metaName": "adskFileFormatVersion",
+                "metaValue": "100L"
+            }
+        ]
+    },
+    "dependencies": [
+        {
+            "uri": "file:///Math_types.json"
+        },
+        {
+            "uri": "file:///Math_long.json"
+        },
+        {
+            "uri": "file:///Math_float.json"
+        },
+        {
+            "uri": "file:///Math_double.json"
+        },
+        {
+            "uri": "file:///Math_char.json"
+        },
+        {
+            "uri": "file:///Math_int.json"
+        },
+        {
+            "uri": "file:///Math_short.json"
+        },
+        {
+            "uri": "file:///Math_uchar.json"
+        },
+        {
+            "uri": "file:///Math_uint.json"
+        },
+        {
+            "uri": "file:///Math_ulong.json"
+        },
+        {
+            "uri": "file:///Math_ushort.json"
+        }
+    ],
+    "namespaces": [],
+    "types": [],
+    "compounds": [
+        {
+            "name": "LP::AngleRange2",
+            "uriImported": "file:///AngleRange1",
+            "metadata": [
+                {
+                    "metaName": "io_nodes",
+                    "metadata": [
+                        {
+                            "metaName": "io_inodes",
+                            "metadata": [
+                                {
+                                    "metaName": "input",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "-2647.47 484.576"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "Input"
+                                                },
+                                                {
+                                                    "metaName": "MinRange"
+                                                },
+                                                {
+                                                    "metaName": "MaxRange"
+                                                },
+                                                {
+                                                    "metaName": "targetAngle"
+                                                },
+                                                {
+                                                    "metaName": "rangeSize"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "metaName": "io_onodes",
+                            "metadata": [
+                                {
+                                    "metaName": "output",
+                                    "metadata": [
+                                        {
+                                            "metaName": "io_metadata",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "DisplayMode",
+                                                    "metaType": "string",
+                                                    "metaValue": "2"
+                                                },
+                                                {
+                                                    "metaName": "LayoutPos",
+                                                    "metaType": "string",
+                                                    "metaValue": "2595.71 494.932"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "metaName": "io_ports",
+                                            "metadata": [
+                                                {
+                                                    "metaName": "output"
+                                                },
+                                                {
+                                                    "metaName": "start_angle"
+                                                },
+                                                {
+                                                    "metaName": "range_angle"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Clamp the input angle to the range to ignore irrelevant values\nDoing so lets us normalize the value properly later on"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-1332.82 111.803 316.077 310.471"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop1",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "( angle2 - angle1 + 180 ) % 360 - 180"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "-816.085 -181.352 1248.35 654.701"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop2",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "abs(diff < -180 ? diff + 360 : diff)"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "480.886 -483.35 1184.7 961.926"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "backdrop3",
+                    "metadata": [
+                        {
+                            "metaName": "type",
+                            "metaType": "string",
+                            "metaValue": "backdrop"
+                        },
+                        {
+                            "metaName": "text",
+                            "metaType": "string",
+                            "metaValue": "Normalize value and reverse"
+                        },
+                        {
+                            "metaName": "coords",
+                            "metaType": "string",
+                            "metaValue": "1721.19 5.91177 644.175 465.927"
+                        }
+                    ]
+                },
+                {
+                    "metaName": "category",
+                    "metaType": "string",
+                    "metaValue": "Rig"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,add"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Math,subtract"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Constants,float"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Logic,greater"
+                },
+                {
+                    "metaName": "_recentNode_",
+                    "metaType": "string",
+                    "metaValue": "BifrostGraph,Core::Logic,if"
+                },
+                {
+                    "metaName": "ViewportRect",
+                    "metaType": "string",
+                    "metaValue": "-2547.32 30.6061 2723.13 1551.91"
+                },
+                {
+                    "metaName": "compoundIsGraph",
+                    "metaValue": "true"
+                }
+            ],
+            "ports": [
+                {
+                    "portName": "Input",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "84.8563385f"
+                },
+                {
+                    "portName": "output",
+                    "portDirection": "output",
+                    "portType": "float"
+                },
+                {
+                    "portName": "MinRange",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "MaxRange",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "0f"
+                },
+                {
+                    "portName": "start_angle",
+                    "portDirection": "output",
+                    "portType": "float"
+                },
+                {
+                    "portName": "range_angle",
+                    "portDirection": "output",
+                    "portType": "float"
+                },
+                {
+                    "portName": "targetAngle",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "90f"
+                },
+                {
+                    "portName": "rangeSize",
+                    "portDirection": "input",
+                    "portType": "float",
+                    "portDefault": "45f"
+                }
+            ],
+            "compoundNodes": [
+                {
+                    "nodeName": "subtract1",
+                    "nodeType": "Core::Math::subtract",
+                    "multiInPortNames": [
+                        "output1",
+                        "output2"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-787 -5.00001"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "add1",
+                    "nodeType": "Core::Math::add",
+                    "multiInPortNames": [
+                        "output1",
+                        "output2"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-482 -109"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "_180_",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-787 238"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "180"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "modulo",
+                    "nodeType": "Core::Math::modulo",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-177 29"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "_360_",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-482 134"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "360"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "diff",
+                    "nodeType": "Core::Math::subtract",
+                    "multiInPortNames": [
+                        "remainder",
+                        "output1"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "60.9786 93.126"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "if",
+                    "nodeType": "Core::Logic::if",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1111.9 97.262"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value3",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "493.903 -448.738"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "-180"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "less",
+                    "nodeType": "Core::Logic::less",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "798.903 -352.738"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "add2",
+                    "nodeType": "Core::Math::add",
+                    "multiInPortNames": [
+                        "output1",
+                        "output2"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "798.903 -134.738"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "value4",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "493.903 177.262"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "360"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "clamp",
+                    "nodeType": "Core::Math::clamp",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1271 181"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "normalize",
+                    "nodeType": "Core::Math::divide",
+                    "multiInPortNames": [
+                        "output1",
+                        "rangeSize"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1774.94 236.777"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "reverse",
+                    "nodeType": "Core::Math::subtract",
+                    "multiInPortNames": [
+                        "output1",
+                        "output2"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "2079.94 104.777"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "_1_",
+                    "valueType": "float",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1774.94 41.7768"
+                        },
+                        {
+                            "metaName": "valuenode_defaultvalue",
+                            "metaType": "string",
+                            "metaValue": "1"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "absolute_value1",
+                    "nodeType": "Core::Math::absolute_value",
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "1381.34 138.373"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "subtract2",
+                    "nodeType": "Core::Math::subtract",
+                    "multiInPortNames": [
+                        "targetAngle",
+                        "rangeSize"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1774.75 551.448"
+                        }
+                    ]
+                },
+                {
+                    "nodeName": "add",
+                    "nodeType": "Core::Math::add",
+                    "multiInPortNames": [
+                        "targetAngle",
+                        "rangeSize"
+                    ],
+                    "metadata": [
+                        {
+                            "metaName": "DisplayMode",
+                            "metaType": "string",
+                            "metaValue": "2"
+                        },
+                        {
+                            "metaName": "LayoutPos",
+                            "metaType": "string",
+                            "metaValue": "-1775.72 784.48"
+                        }
+                    ]
+                }
+            ],
+            "connections": [
+                {
+                    "source": "subtract1.output",
+                    "target": "add1.first.output1"
+                },
+                {
+                    "source": "_180_.output",
+                    "target": "add1.first.output2"
+                },
+                {
+                    "source": "add1.output",
+                    "target": "modulo.value"
+                },
+                {
+                    "source": "_360_.output",
+                    "target": "modulo.divisor"
+                },
+                {
+                    "source": "modulo.remainder",
+                    "target": "diff.first.remainder"
+                },
+                {
+                    "source": "less.output",
+                    "target": "if.condition"
+                },
+                {
+                    "source": "value3.output",
+                    "target": "less.second"
+                },
+                {
+                    "source": "diff.output",
+                    "target": "less.first"
+                },
+                {
+                    "source": "diff.output",
+                    "target": "add2.first.output1"
+                },
+                {
+                    "source": "value4.output",
+                    "target": "add2.first.output2"
+                },
+                {
+                    "source": "add2.output",
+                    "target": "if.true_case"
+                },
+                {
+                    "source": "diff.output",
+                    "target": "if.false_case"
+                },
+                {
+                    "source": "clamp.clamped",
+                    "target": "subtract1.first.output2"
+                },
+                {
+                    "source": "_1_.output",
+                    "target": "reverse.first.output1"
+                },
+                {
+                    "source": "normalize.output",
+                    "target": "reverse.first.output2"
+                },
+                {
+                    "source": "reverse.output",
+                    "target": ".output"
+                },
+                {
+                    "source": "if.output",
+                    "target": "absolute_value1.value"
+                },
+                {
+                    "source": "absolute_value1.absolute_value",
+                    "target": "normalize.first.output1"
+                },
+                {
+                    "source": "_180_.output",
+                    "target": "diff.first.output1"
+                },
+                {
+                    "source": ".Input",
+                    "target": "clamp.value"
+                },
+                {
+                    "source": ".targetAngle",
+                    "target": "subtract1.first.output1"
+                },
+                {
+                    "source": ".targetAngle",
+                    "target": "subtract2.first.targetAngle"
+                },
+                {
+                    "source": ".rangeSize",
+                    "target": "subtract2.first.rangeSize"
+                },
+                {
+                    "source": "subtract2.output",
+                    "target": ".start_angle"
+                },
+                {
+                    "source": ".targetAngle",
+                    "target": "add.first.targetAngle"
+                },
+                {
+                    "source": ".rangeSize",
+                    "target": "add.first.rangeSize"
+                },
+                {
+                    "source": "add.output",
+                    "target": ".range_angle"
+                },
+                {
+                    "source": ".rangeSize",
+                    "target": "normalize.first.rangeSize"
+                },
+                {
+                    "source": "subtract2.output",
+                    "target": "clamp.min"
+                },
+                {
+                    "source": "add.output",
+                    "target": "clamp.max"
+                }
+            ],
+            "values": [
+                {
+                    "valueName": "_180_.value",
+                    "valueType": "float",
+                    "value": "180f"
+                },
+                {
+                    "valueName": "_360_.value",
+                    "valueType": "float",
+                    "value": "360f"
+                },
+                {
+                    "valueName": "value3.value",
+                    "valueType": "float",
+                    "value": "-180f"
+                },
+                {
+                    "valueName": "value4.value",
+                    "valueType": "float",
+                    "value": "360f"
+                },
+                {
+                    "valueName": "_1_.value",
+                    "valueType": "float",
+                    "value": "1f"
+                }
+            ]
+        }
+    ]
+}
